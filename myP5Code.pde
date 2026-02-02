@@ -12,7 +12,14 @@ setup = function(){
   drawExtraDirt(230,190);
   drawExtraDirt(110,110);
   drawExtraDirt(330,50);
-}
+   
+  drawMole(200,200);
+    drawMole(50,100);
+    drawMole(300,40);
+    drawMole(300,330);
+  
+};
+
 
 //🟢drawExtraDirect Function - custom function created by Ms. Hall
 var drawExtraDirt = function(dirtX, dirtY){
@@ -22,13 +29,19 @@ var drawExtraDirt = function(dirtX, dirtY){
   text("☁", dirtX, dirtY);
 };
 
-//🟢drawMole Function - custom function created for this lesson
-var drawMole = function() {
-    var moleX = 248;
-    var moleY = 185;
+draw = function(){
+  if(mousePressed){
+    drawMole(200,200);
+    drawMole(50,100);
+    drawMole(300,40);
+    drawMole(300,330);
+  };
+};
 
+//🟢drawMole Function - custom function created for this lesson
+var drawMole = function(moleX,moleY) {
     noStroke();
-    fill(125, 93, 43);
+    fill(random(0,255), random(0,255), random(0,255));
     ellipse(moleX, moleY, 60, 60); // face
     fill(255, 237, 209);
     ellipse(moleX, moleY+10, 33, 28); 
